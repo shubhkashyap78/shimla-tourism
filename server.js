@@ -12,7 +12,6 @@ const DATA_FILE = path.join(__dirname, 'data', 'tours.json');
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname)));
 
 // In-memory store (Vercel filesystem is read-only)
 let toursData = null;
