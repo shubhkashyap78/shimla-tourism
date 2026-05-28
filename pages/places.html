@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Places to Visit in Shimla | Top Tourist Attractions</title>
+  <meta name="description" content="Discover the best places to visit in Shimla — The Ridge, Mall Road, Jakhu Temple, Kufri, Viceregal Lodge and more." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>" />
+  <style>
+    .filter-bar {
+      display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+      margin-bottom: 40px;
+    }
+    .filter-btn {
+      padding: 8px 20px;
+      border: 1.5px solid var(--primary);
+      background: transparent;
+      color: var(--primary);
+      border-radius: 25px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.87rem;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 700;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--primary);
+      color: white;
+    }
+    .places-grid-full {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .place-detail-list {
+      list-style: none;
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .place-detail-list li { margin-bottom: 4px; }
+    .must-see-banner {
+      background: linear-gradient(135deg, #d4862a, #f5a94e);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 12px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <div class="logo-icon">🏔️</div>
+    <div><span>Shimla</span><small>Queen of the Hills</small></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="places.html" class="active">Places</a></li>
+    <li><a href="hotels.html">Hotels</a></li>
+    <li><a href="how-to-reach.html">How to Reach</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-content">
+    <div class="hero-badge">Explore Shimla</div>
+    <h1>Places to Visit</h1>
+    <p class="breadcrumb"><a href="../index.html">Home</a> / Places to Visit</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-header">
+    <div class="section-tag">Tourist Attractions</div>
+    <h2>Must-Visit Places in Shimla</h2>
+    <div class="divider"></div>
+    <p>From ancient temples to colonial landmarks and natural viewpoints, Shimla has something for every kind of traveller.</p>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-region="all">All Places</button>
+    <button class="filter-btn" data-region="Shimla">Shimla</button>
+    <button class="filter-btn" data-region="Ladakh">Ladakh</button>
+    <button class="filter-btn" data-region="Jammu & Kashmir">J&K</button>
+    <button class="filter-btn" data-region="Northeast">Northeast</button>
+  </div>
+
+  <div class="places-grid-full" id="toursContainer">
+
+    <div class="place-card">
+      <div class="place-img">
+        <img src="https://images.unsplash.com/photo-1590274853856-f22d5ee3d228?w=600&q=80" alt="The Ridge" loading="lazy" />
+        <span class="place-category">Landmark</span>
+        <span class="place-rating">⭐ 4.8</span>
+      </div>
+      <div class="place-body">
+        <h3>The Ridge</h3>
+        <p>The central hub of Shimla — a large open space in front of Christ Church offering spectacular panoramic views of the Himalayan ranges and the town below.</p>
+        <ul class="place-detail-list">
+          <li>📍 City Centre, Shimla</li>
+          <li>🕐 Best Time: Morning & Evening</li>
+          <li>💰 Entry: Free</li>
+          <li>🏃 Duration: 1–2 hours</li>
+        </ul>
+        <span class="must-see-banner">🌟 Must Visit</span>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img">
+        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600&q=80" alt="Mall Road" loading="lazy" />
+        <span class="place-category">Shopping</span>
+        <span class="place-rating">⭐ 4.7</span>
+      </div>
+      <div class="place-body">
+        <h3>Mall Road</h3>
+        <p>Shimla's most famous promenade — a bustling street lined with Victorian buildings, restaurants, souvenir shops, and cafes. The heartbeat of Shimla.</p>
+        <ul class="place-detail-list">
+          <li>📍 Main Bazaar, Shimla</li>
+          <li>🕐 Open: All Day</li>
+          <li>💰 Entry: Free</li>
+          <li>🏃 Duration: 2–3 hours</li>
+        </ul>
+        <span class="must-see-banner">🌟 Must Visit</span>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Jakhu Temple" loading="lazy" />
+        <span class="place-category">Temple</span>
+        <span class="place-rating">⭐ 4.9</span>
+      </div>
+      <div class="place-body">
+        <h3>Jakhu Temple</h3>
+        <p>One of the oldest temples in Shimla, dedicated to Lord Hanuman. Located at 2,455 m, the temple offers breathtaking 360° views of Shimla and the snow-capped Himalayas.</p>
+        <ul class="place-detail-list">
+          <li>📍 Jakhu Hill, 2 km from The Ridge</li>
+          <li>🕐 6:00 AM – 9:00 PM</li>
+          <li>💰 Entry: ₹20 (Ropeway: ₹250)</li>
+          <li>🏃 Duration: 2–3 hours</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=80" alt="Kufri" loading="lazy" />
+        <span class="place-category">Adventure</span>
+        <span class="place-rating">⭐ 4.6</span>
+      </div>
+      <div class="place-body">
+        <h3>Kufri</h3>
+        <p>A popular hill station just 16 km from Shimla, famous for skiing in winter. Enjoy breathtaking Himalayan views, yak rides, and the Himalayan Nature Park with exotic wildlife.</p>
+        <ul class="place-detail-list">
+          <li>📍 16 km from Shimla</li>
+          <li>🕐 Best Time: Nov – Feb (snow)</li>
+          <li>💰 Entry: ₹100</li>
+          <li>🏃 Duration: 3–4 hours</li>
+        </ul>
+        <span class="must-see-banner">❄️ Winter Special</span>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=80" alt="Christ Church Shimla" loading="lazy" />
+        <span class="place-category">Heritage</span>
+        <span class="place-rating">⭐ 4.7</span>
+      </div>
+      <div class="place-body">
+        <h3>Christ Church</h3>
+        <p>A magnificent neo-Gothic church built in 1857 — the second oldest church in North India. Famous for its beautiful stained glass windows and colonial architecture.</p>
+        <ul class="place-detail-list">
+          <li>📍 The Ridge, Shimla</li>
+          <li>🕐 8:00 AM – 6:00 PM</li>
+          <li>💰 Entry: Free</li>
+          <li>🏃 Duration: 1 hour</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Viceregal Lodge" loading="lazy" />
+        <span class="place-category">Heritage</span>
+        <span class="place-rating">⭐ 4.8</span>
+      </div>
+      <div class="place-body">
+        <h3>Viceregal Lodge</h3>
+        <p>The grand summer residence of the British Viceroy, now the Indian Institute of Advanced Studies. A stunning example of Elizabethan architecture with manicured gardens.</p>
+        <ul class="place-detail-list">
+          <li>📍 Observatory Hill, Shimla</li>
+          <li>🕐 9:30 AM – 5:30 PM (Closed Tue)</li>
+          <li>💰 Entry: ₹50</li>
+          <li>🏃 Duration: 2 hours</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img">
+        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80" alt="Green Valley Shimla" loading="lazy" />
+        <span class="place-category">Nature</span>
+        <span class="place-rating">⭐ 4.5</span>
+      </div>
+      <div class="place-body">
+        <h3>Green Valley</h3>
+        <p>A picturesque valley located on the Shimla–Kufri highway, offering stunning views of dense pine and oak forests. A perfect photography and nature walk spot.</p>
+        <ul class="place-detail-list">
+          <li>📍 On Shimla–Kufri Highway</li>
+          <li>🕐 Sunrise to Sunset</li>
+          <li>💰 Entry: Free</li>
+          <li>🏃 Duration: 1–2 hours</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Chadwick Falls" loading="lazy" />
+        <span class="place-category">Nature</span>
+        <span class="place-rating">⭐ 4.4</span>
+      </div>
+      <div class="place-body">
+        <h3>Chadwick Falls</h3>
+        <p>A stunning 86-metre waterfall located inside a dense forest, flowing at its best during monsoon. A hidden gem that's perfect for nature lovers and trekkers.</p>
+        <ul class="place-detail-list">
+          <li>📍 Summer Hill, 3 km from Shimla</li>
+          <li>🕐 Best Time: July – September</li>
+          <li>💰 Entry: Free</li>
+          <li>🏃 Duration: 2–3 hours</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img">
+        <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&q=80" alt="Shimla State Museum" loading="lazy" />
+        <span class="place-category">Heritage</span>
+        <span class="place-rating">⭐ 4.3</span>
+      </div>
+      <div class="place-body">
+        <h3>Himachal State Museum</h3>
+        <p>A rich museum showcasing Himachali art, ancient artefacts, miniature paintings, manuscripts, and sculptures — a treasure trove of Himalayan cultural heritage.</p>
+        <ul class="place-detail-list">
+          <li>📍 Chaura Maidan, Shimla</li>
+          <li>🕐 10 AM – 5 PM (Closed Mon & Hols)</li>
+          <li>💰 Entry: ₹25</li>
+          <li>🏃 Duration: 1.5 hours</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <h2>Plan Your Shimla Visit</h2>
+  <p>Get expert travel tips and customized itineraries for your perfect Shimla trip.</p>
+  <a href="contact.html" class="btn-primary">Contact Us →</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon">🏔️</div>
+        <div><span>Shimla</span><small>Queen of the Hills</small></div>
+      </a>
+      <p>Your complete travel guide to Shimla — India's most iconic hill station.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="places.html">Places to Visit</a></li>
+        <li><a href="ladakh.html">Ladakh</a></li>
+        <li><a href="jammu-kashmir.html">Jammu &amp; Kashmir</a></li>
+        <li><a href="northeast.html">Northeast</a></li>
+        <li><a href="hotels.html">Hotels & Stay</a></li>
+        <li><a href="how-to-reach.html">How to Reach</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Seasons</h4>
+      <ul>
+        <li><a href="#">Summer (Mar–Jun)</a></li>
+        <li><a href="#">Monsoon (Jul–Sep)</a></li>
+        <li><a href="#">Autumn (Oct–Nov)</a></li>
+        <li><a href="#">Winter (Dec–Feb)</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">info@shimlatourism.in</a></li>
+        <li><a href="#">+91-177-280-5320</a></li>
+        <li><a href="#">Shimla, HP 171001</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Shimla Tourism. All rights reserved.</span>
+    <span>Made with ❤️ for Shimla</span>
+  </div>
+</footer>
+
+<script src="../js/api.js"></script>
+<script>
+  let allTours = [];
+  let currentFilter = 'all';
+
+  // Load tours on page load
+  async function init() {
+    allTours = await fetchAllTours();
+    renderTours();
+  }
+
+  function renderTours() {
+    const container = document.getElementById('toursContainer');
+    const filtered = currentFilter === 'all' 
+      ? allTours 
+      : allTours.filter(t => t.region === currentFilter);
+    
+    if (filtered.length === 0) {
+      container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #5a6a7a;">No tours found</div>';
+      return;
+    }
+    
+    container.innerHTML = filtered.map(tour => renderTourCard(tour)).join('');
+  }
+
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentFilter = btn.dataset.region;
+      renderTours();
+    });
+  });
+
+  init();
+</script>
+</body>
+</html>

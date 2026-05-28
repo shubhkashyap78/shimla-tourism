@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Shimla Tourism</title>
+  <meta name="description" content="Contact Shimla Tourism for travel assistance, hotel bookings, guided tours, and trip planning." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>" />
+  <style>
+    .map-embed {
+      width: 100%;
+      height: 350px;
+      border-radius: 16px;
+      border: none;
+      margin-top: 20px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    }
+    .faq-item {
+      border-bottom: 1px solid #eef2f7;
+      padding: 20px 0;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-a {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.8;
+    }
+    .quick-contact-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto 60px;
+    }
+    .qc-card {
+      background: white;
+      border-radius: 14px;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+      border-top: 3px solid var(--primary);
+      text-decoration: none;
+      color: inherit;
+      transition: 0.3s;
+      display: block;
+    }
+    .qc-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+    .qc-card .icon { font-size: 2.2rem; margin-bottom: 12px; }
+    .qc-card h4 { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .qc-card p { font-size: 0.95rem; font-weight: 700; color: var(--primary-dark); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <div class="logo-icon">🏔️</div>
+    <div><span>Shimla</span><small>Queen of the Hills</small></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="places.html">Places</a></li>
+    <li><a href="hotels.html">Hotels</a></li>
+    <li><a href="how-to-reach.html">How to Reach</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-content">
+    <div class="hero-badge">Get In Touch</div>
+    <h1>Contact Us</h1>
+    <p class="breadcrumb"><a href="../index.html">Home</a> / Contact Us</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-header">
+    <div class="section-tag">We're Here to Help</div>
+    <h2>Plan Your Perfect Shimla Trip</h2>
+    <div class="divider"></div>
+    <p>Have questions about visiting Shimla? Need help planning your trip? Our travel experts are ready to assist you.</p>
+  </div>
+
+  <!-- Quick Contact Cards -->
+  <div class="quick-contact-row">
+    <a href="tel:+911772805320" class="qc-card">
+      <div class="icon">📞</div>
+      <h4>Call Us</h4>
+      <p>+91-177-280-5320</p>
+    </a>
+    <a href="mailto:info@shimlatourism.in" class="qc-card">
+      <div class="icon">✉️</div>
+      <h4>Email Us</h4>
+      <p>info@shimlatourism.in</p>
+    </a>
+    <a href="#" class="qc-card">
+      <div class="icon">📍</div>
+      <h4>Visit Office</h4>
+      <p>The Ridge, Shimla 171001</p>
+    </a>
+    <a href="#" class="qc-card">
+      <div class="icon">🕐</div>
+      <h4>Office Hours</h4>
+      <p>Mon–Sat, 9 AM – 6 PM</p>
+    </a>
+  </div>
+
+  <!-- Main Contact Section -->
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <h3>Our Tourism Office</h3>
+      <p>The Shimla Tourism Information Office is located at The Ridge, right in the heart of the city. Our trained staff can help you with maps, brochures, hotel bookings, and guided tour arrangements.</p>
+
+      <ul class="contact-details">
+        <li>
+          <div class="ci">📍</div>
+          <div>
+            <strong>Address</strong>
+            <span>Himachal Pradesh Tourism Development Corporation<br>Scandal Point, The Ridge, Shimla – 171 001</span>
+          </div>
+        </li>
+        <li>
+          <div class="ci">📞</div>
+          <div>
+            <strong>Phone</strong>
+            <span>+91-177-280-5320 / +91-177-265-2561</span>
+          </div>
+        </li>
+        <li>
+          <div class="ci">✉️</div>
+          <div>
+            <strong>Email</strong>
+            <span>info@shimlatourism.in<br>hptdc@hptdc.in</span>
+          </div>
+        </li>
+        <li>
+          <div class="ci">🕐</div>
+          <div>
+            <strong>Office Hours</strong>
+            <span>Monday – Saturday: 9:00 AM – 6:00 PM<br>Sunday: 10:00 AM – 4:00 PM</span>
+          </div>
+        </li>
+        <li>
+          <div class="ci">🚨</div>
+          <div>
+            <strong>Tourist Helpline</strong>
+            <span>1800-180-5050 (Toll-Free)</span>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Map -->
+      <iframe
+        class="map-embed"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3428.3213!2d77.173!3d31.1048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3905d2531a5b2cdf%3A0x3a6f8ca3c37fbe39!2sThe%20Ridge%2C%20Shimla%2C%20Himachal%20Pradesh!5e0!3m2!1sen!2sin!4v1234567890"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Shimla Tourism Office Location">
+      </iframe>
+    </div>
+
+    <div class="contact-form">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--primary-dark); margin-bottom: 25px;">Send Us a Message</h3>
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Rahul" required />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Sharma" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="rahul@example.com" required />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+91 98765 43210" />
+        </div>
+        <div class="form-group">
+          <label>I'm Interested In</label>
+          <select>
+            <option value="">Select a topic</option>
+            <option>General Travel Information</option>
+            <option>Hotel Booking Assistance</option>
+            <option>Guided Tour Packages</option>
+            <option>Transportation Help</option>
+            <option>Family Trip Planning</option>
+            <option>Honeymoon Packages</option>
+            <option>Adventure Activities</option>
+            <option>Winter / Snow Package</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Travel Date</label>
+            <input type="date" />
+          </div>
+          <div class="form-group">
+            <label>No. of Travellers</label>
+            <select>
+              <option>1 (Solo)</option>
+              <option>2 (Couple)</option>
+              <option>3–5 (Small Group)</option>
+              <option>6–10 (Group)</option>
+              <option>10+ (Large Group)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Your Message</label>
+          <textarea placeholder="Tell us about your trip plan, questions, or special requirements..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message ✈️</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section section-alt">
+  <div class="section-header">
+    <div class="section-tag">FAQs</div>
+    <h2>Frequently Asked Questions</h2>
+    <div class="divider"></div>
+  </div>
+  <div style="max-width: 800px; margin: 0 auto; background: white; border-radius: 18px; padding: 35px; box-shadow: 0 5px 25px rgba(0,0,0,0.07);">
+    <div class="faq-item">
+      <div class="faq-q">What is the best time to visit Shimla for snowfall? <span>+</span></div>
+      <div class="faq-a">Shimla receives snowfall primarily from December to February. The heaviest snowfall is usually in January. If you want to experience a snowy Shimla, visit between December 25 and February 15.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How many days are enough to explore Shimla? <span>+</span></div>
+      <div class="faq-a">3 to 4 days are ideal to cover all major attractions in Shimla including The Ridge, Mall Road, Jakhu Temple, Christ Church, Viceregal Lodge, and a day trip to Kufri. If you want to explore nearby areas like Chail or Narkanda, extend to 5–6 days.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Are private vehicles allowed on Mall Road? <span>+</span></div>
+      <div class="faq-a">No. Private vehicles are strictly prohibited on Mall Road and The Ridge area. You must park at designated parking areas like Khalini Parking or use the local taxi/auto service to reach the main bazaar.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What is the weather like in Shimla during summer? <span>+</span></div>
+      <div class="faq-a">Summers (March–June) are the most popular time to visit. Temperatures range from 15°C to 25°C during the day and drop to 8–12°C at night. It's pleasantly cool compared to the plains, making it a perfect summer escape.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is Shimla safe for solo female travellers? <span>+</span></div>
+      <div class="faq-a">Yes, Shimla is generally considered very safe for solo female travellers. The town has a strong police presence and tourist police. The locals are friendly and helpful. Exercise normal precautions as you would in any tourist destination.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What local food should I try in Shimla? <span>+</span></div>
+      <div class="faq-a">Must-try dishes include Chha Gosht, Dham (traditional Himachali feast), Madra, Bhey, Babru (stuffed puri), and Siddu (steamed bread). For sweets, try Mittha (sweet rice) and Khatta. Baljees on Mall Road is one of the best local restaurants.</div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <h2>We'd Love to Help You</h2>
+  <p>Our team is just a call or message away. Plan your dream Shimla trip with our expert guidance.</p>
+  <a href="tel:+911772805320" class="btn-primary">📞 Call Now: +91-177-280-5320</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon">🏔️</div>
+        <div><span>Shimla</span><small>Queen of the Hills</small></div>
+      </a>
+      <p>Your complete travel guide to Shimla — India's most iconic hill station.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="places.html">Places to Visit</a></li>
+        <li><a href="hotels.html">Hotels & Stay</a></li>
+        <li><a href="how-to-reach.html">How to Reach</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Info</h4>
+      <ul>
+        <li><a href="#">The Ridge, Shimla – 171001</a></li>
+        <li><a href="#">+91-177-280-5320</a></li>
+        <li><a href="#">info@shimlatourism.in</a></li>
+        <li><a href="#">Helpline: 1800-180-5050</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Twitter / X</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Shimla Tourism. All rights reserved.</span>
+    <span>Made with ❤️ for Shimla</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const answer = q.nextElementSibling;
+      const isOpen = answer.style.display === 'block';
+      document.querySelectorAll('.faq-a').forEach(a => a.style.display = 'none');
+      document.querySelectorAll('.faq-q span').forEach(s => s.textContent = '+');
+      if (!isOpen) {
+        answer.style.display = 'block';
+        q.querySelector('span').textContent = '−';
+      }
+    });
+  });
+</script>
+</body>
+</html>

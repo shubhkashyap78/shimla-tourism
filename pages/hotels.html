@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotels in Shimla | Best Places to Stay</title>
+  <meta name="description" content="Find the best hotels in Shimla for every budget — luxury resorts, heritage properties, and budget-friendly guesthouses." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>" />
+  <style>
+    .budget-tabs {
+      display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+      margin-bottom: 45px;
+    }
+    .budget-tab {
+      padding: 10px 24px;
+      border: 1.5px solid var(--primary);
+      background: transparent;
+      color: var(--primary);
+      border-radius: 25px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 700;
+    }
+    .budget-tab:hover, .budget-tab.active {
+      background: var(--primary);
+      color: white;
+    }
+    .amenities { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+    .amenity-tag {
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      background: var(--snow);
+      color: var(--primary);
+      border-radius: 12px;
+      font-weight: 700;
+    }
+    .hotel-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 10px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .category-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--primary-dark);
+      margin: 50px 0 25px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+      max-width: 1100px;
+      margin-left: auto; margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <div class="logo-icon">🏔️</div>
+    <div><span>Shimla</span><small>Queen of the Hills</small></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="places.html">Places</a></li>
+    <li><a href="hotels.html" class="active">Hotels</a></li>
+    <li><a href="how-to-reach.html">How to Reach</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-content">
+    <div class="hero-badge">Accommodation</div>
+    <h1>Hotels & Stay in Shimla</h1>
+    <p class="breadcrumb"><a href="../index.html">Home</a> / Hotels & Stay</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-header">
+    <div class="section-tag">Accommodation</div>
+    <h2>Find Your Perfect Stay</h2>
+    <div class="divider"></div>
+    <p>From luxury heritage resorts to comfortable budget guesthouses, Shimla has accommodation for every traveller and budget.</p>
+  </div>
+
+  <div class="budget-tabs">
+    <button class="budget-tab active">All Hotels</button>
+    <button class="budget-tab">Luxury (₹5000+)</button>
+    <button class="budget-tab">Mid-Range (₹2000–5000)</button>
+    <button class="budget-tab">Budget (Under ₹2000)</button>
+  </div>
+
+  <h3 class="category-title">🏆 Luxury Hotels</h3>
+  <div class="hotels-grid">
+
+    <div class="hotel-card">
+      <div class="hotel-img">
+        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80" alt="Wildflower Hall Shimla" loading="lazy" />
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-badge">⭐ Luxury Resort</div>
+        <div class="hotel-stars">★★★★★</div>
+        <h3>Wildflower Hall, Shimla</h3>
+        <p class="location">📍 Chharabra, 13 km from Shimla</p>
+        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.7;">An Oberoi resort set in a cedar forest at 8,250 ft. Features an outdoor pool, spa, and stunning Himalayan views.</p>
+        <div class="amenities">
+          <span class="amenity-tag">🏊 Pool</span>
+          <span class="amenity-tag">💆 Spa</span>
+          <span class="amenity-tag">🍽️ Restaurant</span>
+          <span class="amenity-tag">🎿 Ski</span>
+        </div>
+        <div class="hotel-price">
+          <div class="price">₹18,000 <small>/night</small></div>
+          <a href="contact.html" class="btn-book">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <div class="hotel-img">
+        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80" alt="Oberoi Cecil" loading="lazy" />
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-badge">⭐ Heritage Luxury</div>
+        <div class="hotel-stars">★★★★★</div>
+        <h3>The Oberoi Cecil</h3>
+        <p class="location">📍 Chaura Maidan, Shimla</p>
+        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.7;">A colonial-era luxury hotel established in 1884, offering regal rooms, fine dining, and a heated indoor pool.</p>
+        <div class="amenities">
+          <span class="amenity-tag">🏊 Indoor Pool</span>
+          <span class="amenity-tag">🍷 Bar</span>
+          <span class="amenity-tag">📶 WiFi</span>
+          <span class="amenity-tag">🏋️ Gym</span>
+        </div>
+        <div class="hotel-price">
+          <div class="price">₹12,000 <small>/night</small></div>
+          <a href="contact.html" class="btn-book">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <div class="hotel-img">
+        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80" alt="Radisson Hotel Shimla" loading="lazy" />
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-badge">⭐ Premium Hotel</div>
+        <div class="hotel-stars">★★★★★</div>
+        <h3>Radisson Hotel Shimla</h3>
+        <p class="location">📍 Library Chowk, Shimla</p>
+        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.7;">A contemporary luxury hotel in the heart of Shimla with panoramic valley views, rooftop restaurant, and modern amenities.</p>
+        <div class="amenities">
+          <span class="amenity-tag">🍽️ Rooftop Dining</span>
+          <span class="amenity-tag">📶 WiFi</span>
+          <span class="amenity-tag">🚗 Parking</span>
+        </div>
+        <div class="hotel-price">
+          <div class="price">₹9,500 <small>/night</small></div>
+          <a href="contact.html" class="btn-book">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h3 class="category-title" style="margin-top:50px;">🏨 Mid-Range Hotels</h3>
+  <div class="hotels-grid">
+
+    <div class="hotel-card">
+      <div class="hotel-img">
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80" alt="Hotel Combermere" loading="lazy" />
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-stars">★★★★</div>
+        <h3>Hotel Combermere</h3>
+        <p class="location">📍 The Mall Road, Shimla</p>
+        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.7;">A classic hotel on Mall Road with comfortable rooms and excellent city views. Perfect central location for sightseeing.</p>
+        <div class="amenities">
+          <span class="amenity-tag">🍽️ Restaurant</span>
+          <span class="amenity-tag">📶 WiFi</span>
+          <span class="amenity-tag">🛎️ Room Service</span>
+        </div>
+        <div class="hotel-price">
+          <div class="price">₹3,500 <small>/night</small></div>
+          <a href="contact.html" class="btn-book">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <div class="hotel-img">
+        <img src="https://images.unsplash.com/photo-1517840901100-8179e982acb7?w=600&q=80" alt="Hotel Woodville Palace" loading="lazy" />
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-stars">★★★★</div>
+        <h3>Woodville Palace Hotel</h3>
+        <p class="location">📍 Raj Bhawan Road, Shimla</p>
+        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.7;">A charming heritage property set in a peaceful garden. Known for its old-world charm, antique furniture, and warm hospitality.</p>
+        <div class="amenities">
+          <span class="amenity-tag">🌳 Garden</span>
+          <span class="amenity-tag">🍽️ Restaurant</span>
+          <span class="amenity-tag">📶 WiFi</span>
+        </div>
+        <div class="hotel-price">
+          <div class="price">₹4,200 <small>/night</small></div>
+          <a href="contact.html" class="btn-book">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <div class="hotel-img">
+        <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=600&q=80" alt="HPTDC Hotel Peterhoff" loading="lazy" />
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-stars">★★★★</div>
+        <h3>HPTDC Hotel Peterhoff</h3>
+        <p class="location">📍 Chotta Shimla</p>
+        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.7;">Himachal Tourism's flagship hotel with colonial architecture, beautiful lawns, and excellent restaurant serving Himachali cuisine.</p>
+        <div class="amenities">
+          <span class="amenity-tag">🏛️ Heritage</span>
+          <span class="amenity-tag">🍽️ Restaurant</span>
+          <span class="amenity-tag">🌿 Lawn</span>
+        </div>
+        <div class="hotel-price">
+          <div class="price">₹2,800 <small>/night</small></div>
+          <a href="contact.html" class="btn-book">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h3 class="category-title" style="margin-top:50px;">🏠 Budget-Friendly Stays</h3>
+  <div class="hotels-grid">
+
+    <div class="hotel-card">
+      <div class="hotel-img">
+        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&q=80" alt="Budget Hotel" loading="lazy" />
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-stars">★★★</div>
+        <h3>Hotel Baljees Regency</h3>
+        <p class="location">📍 The Mall Road, Shimla</p>
+        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.7;">A budget-friendly option on Mall Road with clean rooms, friendly staff, and a great in-house restaurant serving North Indian food.</p>
+        <div class="amenities">
+          <span class="amenity-tag">📶 WiFi</span>
+          <span class="amenity-tag">🍽️ Restaurant</span>
+          <span class="amenity-tag">📍 Central</span>
+        </div>
+        <div class="hotel-price">
+          <div class="price">₹1,500 <small>/night</small></div>
+          <a href="contact.html" class="btn-book">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <div class="hotel-img">
+        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&q=80" alt="Guesthouse Shimla" loading="lazy" />
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-stars">★★★</div>
+        <h3>Honeymoon Inn Shimla</h3>
+        <p class="location">📍 Cart Road, Shimla</p>
+        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.7;">A cosy hotel popular with couples and families. Offers clean, comfortable rooms with valley views at affordable prices.</p>
+        <div class="amenities">
+          <span class="amenity-tag">🌄 Valley View</span>
+          <span class="amenity-tag">📶 WiFi</span>
+          <span class="amenity-tag">🧹 Clean Rooms</span>
+        </div>
+        <div class="hotel-price">
+          <div class="price">₹1,800 <small>/night</small></div>
+          <a href="contact.html" class="btn-book">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hotel-card">
+      <div class="hotel-img">
+        <img src="https://images.unsplash.com/photo-1536625979259-1c66f93a17be?w=600&q=80" alt="Youth Hostel Shimla" loading="lazy" />
+      </div>
+      <div class="hotel-body">
+        <div class="hotel-stars">★★★</div>
+        <h3>HPTDC Youth Hostel</h3>
+        <p class="location">📍 Potters Hill, Shimla</p>
+        <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.7;">Perfect for solo travellers and backpackers. Government-run hostel with basic facilities, safe environment, and very affordable rates.</p>
+        <div class="amenities">
+          <span class="amenity-tag">👥 Social</span>
+          <span class="amenity-tag">🍽️ Cafeteria</span>
+          <span class="amenity-tag">💰 Budget</span>
+        </div>
+        <div class="hotel-price">
+          <div class="price">₹600 <small>/bed</small></div>
+          <a href="contact.html" class="btn-book">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Tips Box -->
+  <div style="background: var(--snow); border-radius: 18px; padding: 35px; max-width: 900px; margin: 55px auto 0; border-left: 4px solid var(--primary);">
+    <h3 style="font-family: 'Playfair Display', serif; color: var(--primary-dark); margin-bottom: 15px;">💡 Hotel Booking Tips for Shimla</h3>
+    <div class="tips-grid" style="margin:0; grid-template-columns: 1fr 1fr;">
+      <div class="tip-card" style="box-shadow: none; background: transparent; padding: 0; border: none;">
+        <div class="tip-num" style="font-size: 0.75rem; min-width: 32px; height: 32px;">01</div>
+        <div>
+          <h4>Book Early in Peak Season</h4>
+          <p>May–June and December–January are peak months. Book at least 4–6 weeks in advance.</p>
+        </div>
+      </div>
+      <div class="tip-card" style="box-shadow: none; background: transparent; padding: 0; border: none;">
+        <div class="tip-num" style="font-size: 0.75rem; min-width: 32px; height: 32px;">02</div>
+        <div>
+          <h4>Check Heating Facilities</h4>
+          <p>In winter, make sure your hotel has room heaters or central heating. Nights get very cold!</p>
+        </div>
+      </div>
+      <div class="tip-card" style="box-shadow: none; background: transparent; padding: 0; border: none;">
+        <div class="tip-num" style="font-size: 0.75rem; min-width: 32px; height: 32px;">03</div>
+        <div>
+          <h4>Consider Location</h4>
+          <p>Staying near Mall Road or The Ridge saves transport costs and is convenient for sightseeing.</p>
+        </div>
+      </div>
+      <div class="tip-card" style="box-shadow: none; background: transparent; padding: 0; border: none;">
+        <div class="tip-num" style="font-size: 0.75rem; min-width: 32px; height: 32px;">04</div>
+        <div>
+          <h4>Ask About Parking</h4>
+          <p>If driving to Shimla, confirm parking facilities as vehicle access is restricted in many areas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <h2>Need Help Choosing a Hotel?</h2>
+  <p>Our travel experts can help you find the perfect stay for your budget and preferences.</p>
+  <a href="contact.html" class="btn-primary">Get Recommendations →</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon">🏔️</div>
+        <div><span>Shimla</span><small>Queen of the Hills</small></div>
+      </a>
+      <p>Your complete travel guide to Shimla — India's most iconic hill station.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="places.html">Places to Visit</a></li>
+        <li><a href="hotels.html">Hotels & Stay</a></li>
+        <li><a href="how-to-reach.html">How to Reach</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Hotel Types</h4>
+      <ul>
+        <li><a href="#">Luxury Resorts</a></li>
+        <li><a href="#">Heritage Hotels</a></li>
+        <li><a href="#">Mid-Range Hotels</a></li>
+        <li><a href="#">Budget Stays</a></li>
+        <li><a href="#">Homestays</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">info@shimlatourism.in</a></li>
+        <li><a href="#">+91-177-280-5320</a></li>
+        <li><a href="#">Shimla, HP 171001</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Shimla Tourism. All rights reserved.</span>
+    <span>Made with ❤️ for Shimla</span>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  document.querySelectorAll('.budget-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.budget-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

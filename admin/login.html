@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login - Shimla Tourism</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Lato', 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2942 0%, #1a4a6e 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-container {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      width: 100%;
+      max-width: 400px;
+      padding: 50px 35px;
+      text-align: center;
+    }
+    .login-logo {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #d4862a, #f5a94e);
+      border-radius: 50%;
+      margin: 0 auto 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 35px;
+    }
+    .login-container h1 {
+      font-size: 2rem;
+      color: #1a4a6e;
+      margin-bottom: 8px;
+      font-family: 'Playfair Display', serif;
+    }
+    .login-container .subtitle {
+      color: #5a6a7a;
+      font-size: 0.9rem;
+      margin-bottom: 35px;
+    }
+    .form-group {
+      margin-bottom: 18px;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      color: #1a4a6e;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1.5px solid #e6eef8;
+      border-radius: 10px;
+      background: #fbfdff;
+      font-size: 0.95rem;
+      color: #1c1c2e;
+      outline: none;
+      transition: all 0.3s;
+    }
+    .form-group input:focus {
+      border-color: #1a4a6e;
+      box-shadow: 0 6px 18px rgba(26,74,110,0.08);
+    }
+    .btn-login {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #d4862a, #f5a94e);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 10px;
+    }
+    .btn-login:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(212,134,42,0.3);
+    }
+    .btn-login:active {
+      transform: translateY(0);
+    }
+    .error-message {
+      background: #fee;
+      color: #c33;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      font-size: 0.9rem;
+      display: none;
+    }
+    .success-message {
+      background: #efe;
+      color: #3c3;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      font-size: 0.9rem;
+      display: none;
+    }
+    .back-to-site {
+      margin-top: 18px;
+      text-align: center;
+    }
+    .back-to-site a {
+      color: #1a4a6e;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .back-to-site a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+  <div class="login-logo">🏔️</div>
+  <h1>Admin Login</h1>
+  <p class="subtitle">Shimla Tourism Management Panel</p>
+  
+  <div class="error-message" id="errorMsg"></div>
+  <div class="success-message" id="successMsg"></div>
+  
+  <form id="loginForm">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+    </div>
+    <button type="submit" class="btn-login">Login to Dashboard</button>
+  </form>
+  
+  <div class="back-to-site">
+    <a href="/">← Back to Website</a>
+  </div>
+</div>
+
+<script>
+  document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorMsg = document.getElementById('errorMsg');
+    const successMsg = document.getElementById('successMsg');
+    
+    try {
+      const response = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok && data.success) {
+        successMsg.textContent = 'Login successful! Redirecting...';
+        successMsg.style.display = 'block';
+        localStorage.setItem('adminToken', data.token);
+        localStorage.setItem('adminUser', JSON.stringify(data.admin));
+        setTimeout(() => {
+          window.location.href = '/admin/dashboard';
+        }, 1000);
+      } else {
+        errorMsg.textContent = data.error || 'Login failed. Please try again.';
+        errorMsg.style.display = 'block';
+      }
+    } catch (err) {
+      errorMsg.textContent = 'Connection error. Please try again.';
+      errorMsg.style.display = 'block';
+      console.error(err);
+    }
+  });
+</script>
+
+</body>
+</html>

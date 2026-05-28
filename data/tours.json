@@ -1,0 +1,77 @@
+{
+  "tours": [
+    {
+      "id": 1,
+      "region": "Shimla",
+      "name": "The Ridge",
+      "category": "Landmark",
+      "description": "The central hub of Shimla — a large open space in front of Christ Church offering spectacular panoramic views.",
+      "price": 3000,
+      "discount": 0,
+      "image": "https://images.unsplash.com/photo-1590274853856-f22d5ee3d228?w=600&q=80",
+      "rating": 4.8,
+      "duration": "1-2 hours",
+      "location": "City Centre, Shimla"
+    },
+    {
+      "id": 2,
+      "region": "Shimla",
+      "name": "Mall Road",
+      "category": "Shopping",
+      "description": "Shimla's most famous promenade — a bustling street lined with Victorian buildings.",
+      "price": 0,
+      "discount": 0,
+      "image": "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600&q=80",
+      "rating": 4.7,
+      "duration": "2-3 hours",
+      "location": "Main Bazaar, Shimla"
+    },
+    {
+      "id": 3,
+      "region": "Ladakh",
+      "name": "Pangong Lake",
+      "category": "Nature",
+      "description": "Famous for its ever-changing colours and dramatic setting at 4,350 m.",
+      "price": 2500,
+      "discount": 5,
+      "image": "https://images.unsplash.com/photo-1508264165352-c94f0b1b2b99?w=800&q=80",
+      "rating": 4.9,
+      "duration": "Half to full day",
+      "location": "4-5 hrs drive from Leh"
+    },
+    {
+      "id": 4,
+      "region": "Jammu & Kashmir",
+      "name": "Dal Lake",
+      "category": "Lake",
+      "description": "Renowned for houseboats and shikara rides; a peaceful experience with Mughal gardens nearby.",
+      "price": 1500,
+      "discount": 10,
+      "image": "https://images.unsplash.com/photo-1506917982230-3e5b0f2a1c3b?w=800&q=80",
+      "rating": 4.8,
+      "duration": "Half day",
+      "location": "Srinagar"
+    },
+    {
+      "id": 5,
+      "region": "Northeast",
+      "name": "Kaziranga National Park",
+      "category": "Wildlife",
+      "description": "World-famous for one-horned rhinoceros and rich biodiversity.",
+      "price": 2000,
+      "discount": 15,
+      "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&q=80",
+      "rating": 4.7,
+      "duration": "Full day",
+      "location": "Assam"
+    }
+  ],
+  "adminUsers": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "email": "admin@shimlatourism.com"
+    }
+  ]
+}

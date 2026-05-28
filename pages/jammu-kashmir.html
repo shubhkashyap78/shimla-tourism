@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jammu & Kashmir - Travel Guide</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="description" content="Jammu & Kashmir travel guide: Dal Lake, Gulmarg, Pahalgam, Srinagar and cultural highlights." />
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <div class="logo-icon">🏔️</div>
+    <div>
+      <span>Shimla</span>
+      <small>Queen of the Hills</small>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="places.html">Places</a></li>
+    <li><a href="ladakh.html">Ladakh</a></li>
+    <li><a href="jammu-kashmir.html" class="active">Jammu &amp; Kashmir</a></li>
+    <li><a href="northeast.html">Northeast</a></li>
+    <li><a href="hotels.html">Hotels</a></li>
+    <li><a href="how-to-reach.html">How to Reach</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-content">
+    <div class="hero-badge">Explore Jammu &amp; Kashmir</div>
+    <h1>Jammu &amp; Kashmir</h1>
+    <p class="breadcrumb"><a href="../index.html">Home</a> / Jammu &amp; Kashmir</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-header">
+    <div class="section-tag">Valleys & Lakes</div>
+    <h2>Highlights</h2>
+    <div class="divider"></div>
+    <p>From serene Dal Lake to the meadows of Gulmarg — a mix of nature, culture and adventure.</p>
+  </div>
+
+  <div class="places-grid">
+    <div class="place-card">
+      <div class="place-img">
+        <img src="https://images.unsplash.com/photo-1506917982230-3e5b0f2a1c3b?w=800&q=80" alt="Dal Lake" loading="lazy" />
+        <span class="place-category">Lake</span>
+      </div>
+      <div class="place-body">
+        <h3>Dal Lake (Srinagar)</h3>
+        <p>Renowned for houseboats and shikara rides; a peaceful experience with Mughal gardens nearby.</p>
+        <ul class="place-detail-list">
+          <li>📍 Srinagar</li>
+          <li>🕐 Best Time: Apr–Oct</li>
+          <li>🏃 Duration: Half day</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img">
+        <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=800&q=80" alt="Gulmarg" loading="lazy" />
+        <span class="place-category">Meadow</span>
+      </div>
+      <div class="place-body">
+        <h3>Gulmarg</h3>
+        <p>Famous for skiing, gondola rides, and alpine meadows — a year-round destination for adventure and views.</p>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img">
+        <img src="https://images.unsplash.com/photo-1505765058571-1d7a8b4cf7f5?w=800&q=80" alt="Pahalgam" loading="lazy" />
+        <span class="place-category">Valley</span>
+      </div>
+      <div class="place-body">
+        <h3>Pahalgam</h3>
+        <p>A scenic valley ideal for trekking, river rafting and as a base for the Amarnath Yatra.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:760px; margin:40px auto;">
+    <h3>Book a Jammu &amp; Kashmir Trip</h3>
+    <p>Send your travel dates and preferences; we'll get back with an itinerary and price estimate.</p>
+    <form id="jammu-booking" class="booking-form" action="#" method="post">
+      <div class="form-row"><input name="name" placeholder="Full name" required></div>
+      <div class="form-row"><input name="email" type="email" placeholder="Email" required></div>
+      <div class="form-row"><input name="phone" placeholder="Phone number" required></div>
+      <div class="form-row"><label>Arrival <input name="arrival" type="date" required></label> <label>Departure <input name="departure" type="date" required></label></div>
+      <div class="form-row"><input name="travelers" type="number" min="1" max="20" value="2" required></div>
+      <div class="form-row"><textarea name="message" placeholder="Any preferences or questions"></textarea></div>
+      <div class="form-row"><button type="submit" class="btn-primary">Request Booking</button></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 Regional Guides. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('jammu-booking').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Booking request sent — our travel expert will contact you soon.');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>

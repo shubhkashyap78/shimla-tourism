@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shimla Tourism - Queen of the Hills | Official Travel Guide</title>
+  <meta name="description" content="Explore Shimla - the Queen of the Hills. Plan your perfect trip with our complete guide to places, hotels, weather, and travel tips." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon">🏔️</div>
+    <div>
+      <span>Shimla</span>
+      <small>Queen of the Hills</small>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="pages/places.html">Places</a></li>
+    <li><a href="pages/ladakh.html">Ladakh</a></li>
+    <li><a href="pages/jammu-kashmir.html">Jammu &amp; Kashmir</a></li>
+    <li><a href="pages/northeast.html">Northeast</a></li>
+    <li><a href="pages/hotels.html">Hotels</a></li>
+    <li><a href="pages/how-to-reach.html">How to Reach</a></li>
+    <li><a href="pages/gallery.html">Gallery</a></li>
+    <li><a href="pages/contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- CAROUSEL BACKGROUNDS -->
+  <div class="hero-carousel">
+    <div class="hc-slide active" style="background-image:url('/images/shimla.jpg')"></div>
+    <div class="hc-slide" style="background-image:url('/jammu-kashmir.jpg')"></div>
+    <div class="hc-slide" style="background-image:url('/images/ladakh.webp')"></div>
+    <div class="hc-slide" style="background-image:url('/images/northeast.jpg')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="snowflakes"></div>
+
+  <!-- CAROUSEL DOTS -->
+  <div class="hc-dots">
+    <span class="hc-dot active" data-index="0"></span>
+    <span class="hc-dot" data-index="1"></span>
+    <span class="hc-dot" data-index="2"></span>
+    <span class="hc-dot" data-index="3"></span>
+  </div>
+
+  <!-- CAROUSEL LABELS -->
+  <div class="hc-label active" data-index="0">🏔️ Shimla</div>
+  <div class="hc-label" data-index="1">🌸 Jammu &amp; Kashmir</div>
+  <div class="hc-label" data-index="2">🏜️ Ladakh</div>
+  <div class="hc-label" data-index="3">🌿 Northeast India</div>
+
+  <div class="hero-layout">
+    <div class="hero-content">
+      <div class="hero-badge">🏔️ Himachal Pradesh, India</div>
+      <h1>Welcome to <em>Shimla</em></h1>
+      <p>Experience the timeless charm of India's most beloved hill station — where snow-capped peaks, colonial heritage, and Himalayan magic await.</p>
+      <div class="hero-buttons">
+        <a href="pages/places.html" class="btn-primary">Explore Places</a>
+        <a href="#scroll-booking" class="btn-secondary">Quick Booking ↓</a>
+      </div>
+    </div>
+    <!-- HERO QUICK BOOKING FORM -->
+    <div class="hero-booking-card">
+      <div class="hbc-header">🗓️ Quick Booking</div>
+      <form class="hbc-form" onsubmit="handleHeroBooking(event)">
+        <div class="hbc-row">
+          <label>Destination
+            <select name="destination" required>
+              <option value="">Select Region</option>
+              <option>Shimla</option>
+              <option>Ladakh</option>
+              <option>Jammu &amp; Kashmir</option>
+              <option>Northeast</option>
+            </select>
+          </label>
+        </div>
+        <div class="hbc-row two-col">
+          <label>Check-in
+            <input type="date" name="checkin" required />
+          </label>
+          <label>Check-out
+            <input type="date" name="checkout" required />
+          </label>
+        </div>
+        <div class="hbc-row two-col">
+          <label>Adults
+            <input type="number" name="adults" min="1" max="20" value="2" required />
+          </label>
+          <label>Children
+            <input type="number" name="children" min="0" max="10" value="0" />
+          </label>
+        </div>
+        <button type="submit" class="hbc-btn">Search Packages →</button>
+      </form>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><strong>2,206m</strong><span>Altitude</span></div>
+    <div class="stat"><strong>20+</strong><span>Tourist Spots</span></div>
+    <div class="stat"><strong>12°C</strong><span>Avg Temp</span></div>
+    <div class="stat"><strong>5 Hrs</strong><span>From Delhi</span></div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
+
+<!-- ANIMATED COUNTERS -->
+<section class="counters-section">
+  <div class="counters-grid">
+    <div class="counter-item">
+      <span class="counter-num" data-target="50000">0</span>
+      <span class="counter-label">Happy Tourists / Year</span>
+    </div>
+    <div class="counter-item">
+      <span class="counter-num" data-target="120">0</span>
+      <span class="counter-label">Tour Packages</span>
+    </div>
+    <div class="counter-item">
+      <span class="counter-num" data-target="98">0</span>
+      <span class="counter-label">% Satisfaction Rate</span>
+    </div>
+    <div class="counter-item">
+      <span class="counter-num" data-target="15">0</span>
+      <span class="counter-label">Years of Experience</span>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-tag">Why Shimla</div>
+    <h2>A Destination Like No Other</h2>
+    <div class="divider"></div>
+    <p>From snow-dusted peaks to charming bazaars, Shimla is a perfect blend of nature, culture, and history.</p>
+  </div>
+  <div class="highlights-grid">
+    <div class="highlight-card">
+      <div class="highlight-icon">🌨️</div>
+      <h3>Snowfall Paradise</h3>
+      <p>Experience magical snowfall from December to February — perfect for a winter wonderland escape.</p>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-icon">🏛️</div>
+      <h3>Colonial Heritage</h3>
+      <p>Walk through Victorian-era buildings, gothic churches, and the iconic Mall Road that date back to British India.</p>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-icon">🚂</div>
+      <h3>UNESCO Toy Train</h3>
+      <p>The Kalka–Shimla Railway, a UNESCO World Heritage Site, offers a scenic narrow-gauge mountain journey.</p>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-icon">🍎</div>
+      <h3>Apple Orchards</h3>
+      <p>Shimla's lush apple orchards produce some of India's finest apples — visit for a fresh, fragrant experience.</p>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-icon">🌲</div>
+      <h3>Dense Forests</h3>
+      <p>Towering cedar, rhododendron, and Himalayan oak forests surround Shimla with natural beauty year-round.</p>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-icon">🛶</div>
+      <h3>Adventure Sports</h3>
+      <p>Trekking, skiing, ice skating, and paragliding — Shimla is a playground for thrill-seekers and nature lovers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REGIONS SECTION -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-tag">Explore India</div>
+    <h2>Popular Regions</h2>
+    <div class="divider"></div>
+    <p>From the icy deserts of Ladakh to the lush valleys of Northeast — discover India's most breathtaking regions.</p>
+  </div>
+  <div class="regions-grid">
+    <a href="pages/ladakh.html" class="region-card" style="background-image:url('/images/ladakh.webp')">
+      <div class="region-overlay"></div>
+      <div class="region-body">
+        <span class="region-tag">Adventure</span>
+        <h3>Ladakh</h3>
+        <p>Land of high passes, monasteries &amp; Pangong Lake</p>
+        <span class="region-cta">Explore →</span>
+      </div>
+    </a>
+    <a href="pages/jammu-kashmir.html" class="region-card" style="background-image:url('/jammu-kashmir.jpg')">
+      <div class="region-overlay"></div>
+      <div class="region-body">
+        <span class="region-tag">Paradise</span>
+        <h3>Jammu &amp; Kashmir</h3>
+        <p>Dal Lake, Gulmarg &amp; the Valley of Flowers</p>
+        <span class="region-cta">Explore →</span>
+      </div>
+    </a>
+    <a href="pages/northeast.html" class="region-card" style="background-image:url('/images/northeast.jpg')">
+      <div class="region-overlay"></div>
+      <div class="region-body">
+        <span class="region-tag">Nature</span>
+        <h3>Northeast India</h3>
+        <p>Meghalaya, Sikkim &amp; the Seven Sisters</p>
+        <span class="region-cta">Explore →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- TOP PLACES PREVIEW -->
+<section class="section section-alt">
+  <div class="section-header">
+    <div class="section-tag">Must Visit</div>
+    <h2>Top Attractions in Shimla</h2>
+    <div class="divider"></div>
+    <p>Explore the iconic landmarks and hidden gems that make Shimla truly unforgettable.</p>
+  </div>
+  <div class="places-grid">
+    <div class="place-card">
+      <div class="place-img">
+        <img src="/images/the-ridge.jpg" alt="The Ridge Shimla" loading="lazy" />
+        <span class="place-category">Landmark</span>
+        <span class="place-rating">⭐ 4.8</span>
+      </div>
+      <div class="place-body">
+        <h3>The Ridge</h3>
+        <p>A large open space in the heart of Shimla offering panoramic views of the surrounding mountains and iconic colonial architecture.</p>
+        <div class="place-meta">
+          <span>📍 City Centre</span>
+          <span>🕐 1–2 hrs</span>
+          <span>🆓 Free Entry</span>
+        </div>
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="place-img">
+        <img src="/images/mall-road.webp" alt="Mall Road Shimla" loading="lazy" />
+        <span class="place-category">Shopping</span>
+        <span class="place-rating">⭐ 4.7</span>
+      </div>
+      <div class="place-body">
+        <h3>Mall Road</h3>
+        <p>The main street of Shimla, lined with shops, restaurants, and colonial-era buildings. The perfect evening stroll destination.</p>
+        <div class="place-meta">
+          <span>📍 Main Bazaar</span>
+          <span>🕐 2–3 hrs</span>
+          <span>🆓 Free Entry</span>
+        </div>
+      </div>
+    </div>
+    <div class="place-card">
+      <div class="place-img">
+        <img src="/images/jakhu.jpg" alt="Jakhu Temple Shimla" loading="lazy" />
+        <span class="place-category">Temple</span>
+        <span class="place-rating">⭐ 4.9</span>
+      </div>
+      <div class="place-body">
+        <h3>Jakhu Temple</h3>
+        <p>Ancient temple dedicated to Lord Hanuman, situated at 2,455 m with breathtaking 360° views of Shimla and the Himalayas.</p>
+        <div class="place-meta">
+          <span>📍 Jakhu Hill</span>
+          <span>🕐 2–3 hrs</span>
+          <span>💰 ₹20</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:40px;">
+    <a href="pages/places.html" class="btn-primary">View All Places</a>
+  </div>
+</section>
+
+<!-- BEST TIME TO VISIT -->
+<section class="seasons-section">
+  <div class="seasons-bg-overlay"></div>
+  <div class="seasons-inner">
+    <div class="section-header seasons-header">
+      <div class="section-tag" style="color:#f5a94e;">Travel Planning</div>
+      <h2 style="color:#fff;">Best Time to Visit Shimla</h2>
+      <div class="divider"></div>
+      <p style="color:rgba(255,255,255,0.8);">Shimla is beautiful in every season — choose the experience that suits you best.</p>
+    </div>
+    <div class="seasons-row">
+
+      <div class="season-card">
+        <div class="season-img" style="background-image:url('/images/shimla.jpg');"></div>
+        <div class="season-img-overlay"></div>
+        <span class="season-badge">Popular</span>
+        <div class="season-body">
+          <span class="season-icon">☀️</span>
+          <h3>Summer</h3>
+          <div class="months">March – June</div>
+          <p>Pleasant weather, 15–25°C. Perfect for sightseeing, trekking, and outdoor activities.</p>
+          <div class="season-temp">🌡️ 15–25°C</div>
+        </div>
+      </div>
+
+      <div class="season-card">
+        <div class="season-img" style="background-image:url('/images/ladakh.jpg');"></div>
+        <div class="season-img-overlay"></div>
+        <span class="season-badge">Scenic</span>
+        <div class="season-body">
+          <span class="season-icon">🌧️</span>
+          <h3>Monsoon</h3>
+          <div class="months">July – September</div>
+          <p>Lush green hills, 10–20°C. Landslide risk possible but stunning landscapes.</p>
+          <div class="season-temp">🌡️ 10–20°C</div>
+        </div>
+      </div>
+
+      <div class="season-card">
+        <div class="season-img" style="background-image:url('/october.png');"></div>
+        <div class="season-img-overlay"></div>
+        <span class="season-badge">Peaceful</span>
+        <div class="season-body">
+          <span class="season-icon">🍂</span>
+          <h3>Autumn</h3>
+          <div class="months">October – November</div>
+          <p>Clear skies, 5–15°C. Apple harvest season — most beautiful time for nature walks.</p>
+          <div class="season-temp">🌡️ 5–15°C</div>
+        </div>
+      </div>
+
+      <div class="season-card">
+        <div class="season-img" style="background-image:url('/images/jakhu2.jpg');"></div>
+        <div class="season-img-overlay"></div>
+        <span class="season-badge">Magical</span>
+        <div class="season-body">
+          <span class="season-icon">❄️</span>
+          <h3>Winter</h3>
+          <div class="months">December – February</div>
+          <p>Snowfall, -4–10°C. Ice skating, skiing, and a stunning white wonderland experience.</p>
+          <div class="season-temp">🌡️ -4–10°C</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS SECTION -->
+
+
+    
+
+<!-- TRAVEL TIPS -->
+<section class="section section-alt">
+  <div class="section-header">
+    <div class="section-tag">Helpful Tips</div>
+    <h2>Essential Travel Tips</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-num">01</div>
+      <div>
+        <h4>Pack Warm Clothes</h4>
+        <p>Even in summer, evenings get cold. Always carry a jacket or sweater when visiting Shimla.</p>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">02</div>
+      <div>
+        <h4>Book in Advance</h4>
+        <p>Shimla is a popular destination. Book hotels and train tickets well in advance, especially in peak season.</p>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">03</div>
+      <div>
+        <h4>Use Local Transport</h4>
+        <p>Private vehicles are not allowed on Mall Road and Ridge. Use local taxis, rickshaws, or walk.</p>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">04</div>
+      <div>
+        <h4>Altitude Awareness</h4>
+        <p>Shimla sits at 2,200m. If you feel dizzy or tired, rest well and stay hydrated.</p>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">05</div>
+      <div>
+        <h4>Carry Cash</h4>
+        <p>While ATMs are available, some smaller shops and local eateries prefer cash payments.</p>
+      </div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">06</div>
+      <div>
+        <h4>Respect Local Culture</h4>
+        <p>Dress modestly when visiting temples. Remove shoes and be respectful of local customs and traditions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- REVIEWS SECTION -->
+<section class="reviews-section">
+  <div class="reviews-bg"></div>
+  <div class="reviews-inner">
+
+    <div class="section-header">
+      <div class="section-tag" style="color:var(--accent-light);">Traveller Stories</div>
+      <h2 style="color:#fff;">What Our Guests Say</h2>
+      <div class="divider"></div>
+      <p style="color:rgba(255,255,255,0.75);">Real experiences from real travellers who explored the magic of Shimla with us.</p>
+    </div>
+
+    <!-- OVERALL RATING BAR -->
+    <div class="reviews-summary">
+      <div class="rs-score">
+        <span class="rs-big">4.9</span>
+        <div class="rs-stars">★★★★★</div>
+        <span class="rs-count">Based on 2,400+ reviews</span>
+      </div>
+      <div class="rs-bars">
+        <div class="rs-bar-row"><span>5 ★</span><div class="rs-bar"><div class="rs-fill" style="width:88%"></div></div><span>88%</span></div>
+        <div class="rs-bar-row"><span>4 ★</span><div class="rs-bar"><div class="rs-fill" style="width:8%"></div></div><span>8%</span></div>
+        <div class="rs-bar-row"><span>3 ★</span><div class="rs-bar"><div class="rs-fill" style="width:3%"></div></div><span>3%</span></div>
+        <div class="rs-bar-row"><span>2 ★</span><div class="rs-bar"><div class="rs-fill" style="width:1%"></div></div><span>1%</span></div>
+        <div class="rs-bar-row"><span>1 ★</span><div class="rs-bar"><div class="rs-fill" style="width:0%"></div></div><span>0%</span></div>
+      </div>
+    </div>
+
+    <!-- REVIEW CARDS -->
+    <div class="reviews-grid">
+
+      <div class="review-card featured">
+        <div class="rc-quote">❝</div>
+        <p class="rc-text">Shimla was absolutely breathtaking! The snow-covered mountains, the toy train ride, and the warm hospitality made it the best trip of my life. Will definitely come back every winter!</p>
+        <div class="rc-footer">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80" alt="Priya S" class="rc-avatar" />
+          <div class="rc-info">
+            <strong>Priya Sharma</strong>
+            <span>Delhi, India</span>
+          </div>
+          <div class="rc-rating">★★★★★</div>
+        </div>
+        <div class="rc-tag">Winter Trip 2024</div>
+      </div>
+
+      <div class="review-card">
+        <div class="rc-quote">❝</div>
+        <p class="rc-text">The Jakhu Temple trek at sunrise was magical. Monkeys everywhere and the view from the top — absolutely priceless. Shimla never disappoints!</p>
+        <div class="rc-footer">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80" alt="Rahul M" class="rc-avatar" />
+          <div class="rc-info">
+            <strong>Rahul Mehta</strong>
+            <span>Mumbai, India</span>
+          </div>
+          <div class="rc-rating">★★★★★</div>
+        </div>
+        <div class="rc-tag">Summer 2024</div>
+      </div>
+
+      <div class="review-card">
+        <div class="rc-quote">❝</div>
+        <p class="rc-text">Mall Road in the evening with hot momos and a cup of chai — pure bliss. The colonial architecture is stunning. A must-visit for every Indian traveller.</p>
+        <div class="rc-footer">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80" alt="Ananya K" class="rc-avatar" />
+          <div class="rc-info">
+            <strong>Ananya Kapoor</strong>
+            <span>Bangalore, India</span>
+          </div>
+          <div class="rc-rating">★★★★★</div>
+        </div>
+        <div class="rc-tag">Autumn 2024</div>
+      </div>
+
+      <div class="review-card">
+        <div class="rc-quote">❝</div>
+        <p class="rc-text">Kufri was a dream! The skiing experience was top-notch and the guides were super helpful. Booked through this website and everything was seamless.</p>
+        <div class="rc-footer">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&q=80" alt="Vikram S" class="rc-avatar" />
+          <div class="rc-info">
+            <strong>Vikram Singh</strong>
+            <span>Jaipur, India</span>
+          </div>
+          <div class="rc-rating">★★★★★</div>
+        </div>
+        <div class="rc-tag">Winter 2023</div>
+      </div>
+
+      <div class="review-card">
+        <div class="rc-quote">❝</div>
+        <p class="rc-text">Took my family for a 5-day trip. Kids loved the apple orchards and the toy train. The Viceregal Lodge tour was incredibly informative. Highly recommend!</p>
+        <div class="rc-footer">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&q=80" alt="Meena R" class="rc-avatar" />
+          <div class="rc-info">
+            <strong>Meena Rao</strong>
+            <span>Chennai, India</span>
+          </div>
+          <div class="rc-rating">★★★★☆</div>
+        </div>
+        <div class="rc-tag">Family Trip 2024</div>
+      </div>
+
+      <div class="review-card">
+        <div class="rc-quote">❝</div>
+        <p class="rc-text">The Himalayan views from Prospect Hill are something else entirely. Peaceful, serene, and absolutely gorgeous. Shimla is a photographer's paradise!</p>
+        <div class="rc-footer">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" alt="Arjun P" class="rc-avatar" />
+          <div class="rc-info">
+            <strong>Arjun Patel</strong>
+            <span>Ahmedabad, India</span>
+          </div>
+          <div class="rc-rating">★★★★★</div>
+        </div>
+        <div class="rc-tag">Monsoon 2024</div>
+      </div>
+
+    </div>
+  </div>
+  </section>
+
+<!-- SCROLL BOOKING FORM -->
+<section class="section section-alt" id="scroll-booking">
+  <div class="section-header">
+    <div class="section-tag">Book Now</div>
+    <h2>Plan Your Dream Trip</h2>
+    <div class="divider"></div>
+    <p>Fill in your details and we'll craft the perfect itinerary for you.</p>
+  </div>
+  <div class="scroll-booking-wrapper">
+    <form class="scroll-booking-form" onsubmit="handleScrollBooking(event)">
+      <div class="sbf-grid">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required />
+        </div>
+        <div class="form-group">
+          <label>Destination</label>
+          <select name="destination" required>
+            <option value="">Choose Region</option>
+            <option>Shimla</option>
+            <option>Ladakh</option>
+            <option>Jammu &amp; Kashmir</option>
+            <option>Northeast</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Travel Date</label>
+          <input type="date" name="travel_date" required />
+        </div>
+        <div class="form-group">
+          <label>No. of Travellers</label>
+          <input type="number" name="travellers" min="1" max="50" placeholder="2" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Special Requests</label>
+        <textarea name="message" rows="3" placeholder="Any special requirements, preferences or questions..."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send Booking Request →</button>
+      <p id="sbf-msg" style="display:none; margin-top:12px; color:#2d6a4f; font-weight:700; text-align:center;"></p>
+    </form>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <h2>Ready to Explore Shimla?</h2>
+  <p>Plan your perfect mountain getaway. Get in touch with us for personalized travel packages and expert guidance.</p>
+  <a href="#scroll-booking" class="btn-primary" style="font-size:1rem; padding:15px 38px;">Plan My Trip →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">🏔️</div>
+        <div>
+          <span>Shimla</span>
+          <small>Queen of the Hills</small>
+        </div>
+      </a>
+      <p>Your complete travel guide to Shimla — India's most iconic hill station nestled in the Himalayas.</p>
+      <div class="social-links">
+        <a href="#" title="Facebook">f</a>
+        <a href="#" title="Instagram">📷</a>
+        <a href="#" title="YouTube">▶</a>
+        <a href="#" title="Twitter">𝕏</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/places.html">Places to Visit</a></li>
+        <li><a href="pages/ladakh.html">Ladakh</a></li>
+        <li><a href="pages/jammu-kashmir.html">Jammu &amp; Kashmir</a></li>
+        <li><a href="pages/northeast.html">Northeast</a></li>
+        <li><a href="pages/hotels.html">Hotels & Stay</a></li>
+        <li><a href="pages/how-to-reach.html">How to Reach</a></li>
+        <li><a href="pages/gallery.html">Photo Gallery</a></li>
+        <li><a href="pages/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Top Places</h4>
+      <ul>
+        <li><a href="pages/places.html">The Ridge</a></li>
+        <li><a href="pages/places.html">Mall Road</a></li>
+        <li><a href="pages/places.html">Jakhu Temple</a></li>
+        <li><a href="pages/places.html">Kufri</a></li>
+        <li><a href="pages/places.html">Christ Church</a></li>
+        <li><a href="pages/places.html">Viceregal Lodge</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="#">Weather Updates</a></li>
+        <li><a href="#">Travel Packages</a></li>
+        <li><a href="#">Himachal Tourism</a></li>
+        <li><a href="#">Emergency Contacts</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Shimla Tourism. All rights reserved.</span>
+    <span>Made with ❤️ for Shimla</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+// Hero Carousel
+(function() {
+  const slides = document.querySelectorAll('.hc-slide');
+  const dots   = document.querySelectorAll('.hc-dot');
+  const labels = document.querySelectorAll('.hc-label');
+  let current  = 0;
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    labels[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    labels[current].classList.add('active');
+  }
+
+  dots.forEach(d => d.addEventListener('click', () => {
+    clearInterval(timer);
+    goTo(+d.dataset.index);
+    timer = setInterval(() => goTo(current + 1), 4500);
+  }));
+
+  let timer = setInterval(() => goTo(current + 1), 4500);
+})();
+
+// Animated counters
+function animateCounters() {
+  document.querySelectorAll('.counter-num').forEach(el => {
+    const target = +el.dataset.target;
+    const step = Math.ceil(target / 80);
+    let current = 0;
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.textContent = current.toLocaleString('en-IN');
+      if (current >= target) clearInterval(timer);
+    }, 20);
+  });
+}
+
+const counterSection = document.querySelector('.counters-section');
+if (counterSection) {
+  const obs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) { animateCounters(); obs.disconnect(); }
+  }, { threshold: 0.4 });
+  obs.observe(counterSection);
+}
+
+// Hero quick booking
+function handleHeroBooking(e) {
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(e.target));
+  window.location.href = `pages/places.html?region=${encodeURIComponent(d.destination)}&checkin=${d.checkin}&checkout=${d.checkout}&adults=${d.adults}&children=${d.children}`;
+}
+
+// Scroll booking form
+function handleScrollBooking(e) {
+  e.preventDefault();
+  const msg = document.getElementById('sbf-msg');
+  msg.textContent = '✅ Booking request sent! We will contact you within 24 hours.';
+  msg.style.display = 'block';
+  e.target.reset();
+  setTimeout(() => msg.style.display = 'none', 5000);
+}
+</script>
+</body>
+</html>
