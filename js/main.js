@@ -6,20 +6,46 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Hamburger menu
+// Hamburger menu with animation
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
-if (hamburger) {
+
+if (hamburger && navLinks) {
   hamburger.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    navLinks.style.flexDirection = 'column';
-    navLinks.style.position = 'absolute';
-    navLinks.style.top = '70px';
-    navLinks.style.left = '0';
-    navLinks.style.right = '0';
-    navLinks.style.background = 'var(--primary-dark)';
-    navLinks.style.padding = '20px';
-    navLinks.style.zIndex = '999';
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    }
+  });
+  
+  // Handle dropdown in mobile
+  document.querySelectorAll('.nav-links > li > a').forEach(link => {
+    if (link.nextElementSibling && link.nextElementSibling.classList.contains('dropdown')) {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 900) {
+          e.preventDefault();
+          const parent = link.parentElement;
+          parent.classList.toggle('dropdown-open');
+        }
+      });
+    }
+  });
+  
+  // Close menu when clicking on a link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      // Only close if it's not a dropdown parent or if clicking dropdown item
+      if (!link.nextElementSibling || link.parentElement.parentElement.classList.contains('dropdown')) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      }
+    });
   });
 }
 
@@ -41,7 +67,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOpts);
 
-document.querySelectorAll('.highlight-card, .place-card, .hotel-card, .season-card, .reach-card, .tip-card').forEach(el => {
+document.querySelectorAll('.highlight-card, .place-card, .hotel-card, .season-card, .reach-card, .tip-card, .lp-card, .ls-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(30px)';
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

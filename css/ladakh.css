@@ -1,0 +1,619 @@
+/* ═══════════════════════════════════════════════════════════
+   LADAKH PAGE - CINEMATIC DESIGN
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── CINEMATIC HERO ─── */
+.ladakh-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 70px;
+}
+
+.lh-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1508264165352-c94f0b1b2b99?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+.lh-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10,25,47,0.85) 0%, rgba(16,45,69,0.75) 50%, rgba(13,52,38,0.85) 100%);
+  z-index: 1;
+}
+
+.lh-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 5%;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.lh-badge {
+  display: inline-block;
+  background: rgba(212,134,42,0.2);
+  border: 1px solid rgba(212,134,42,0.5);
+  color: var(--accent-light);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+}
+
+.lh-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+}
+
+.lh-content h1 em {
+  color: var(--accent-light);
+  font-style: italic;
+  display: block;
+  margin-top: 10px;
+}
+
+.lh-content p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lh-meta {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+}
+
+.lh-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.08);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.lh-scroll {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  animation: bounce 2s infinite;
+}
+
+.lh-scroll span {
+  display: block;
+  width: 30px;
+  height: 50px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 15px;
+  position: relative;
+}
+
+.lh-scroll span::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  animation: scrollDot 2s infinite;
+}
+
+/* ─── PLACES GRID ─── */
+.ladakh-places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lp-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 35px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.lp-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.lp-img {
+  position: relative;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.lp-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%);
+  transition: 0.4s;
+}
+
+.lp-card:hover .lp-img::after {
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
+}
+
+.lp-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.7rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.lp-body {
+  padding: 25px;
+}
+
+.lp-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.lp-location {
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.lp-body > p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.lp-meta {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.lp-meta span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--light-bg);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-weight: 600;
+}
+
+/* ─── BEST TIME TO VISIT (SEASONS) ─── */
+.ladakh-seasons {
+  position: relative;
+  padding: 100px 5%;
+  background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.ls-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10,25,47,0.92) 0%, rgba(16,45,69,0.88) 50%, rgba(13,52,38,0.92) 100%);
+  z-index: 0;
+}
+
+.ls-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.ls-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: default;
+  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.ls-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+}
+
+.ls-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s;
+}
+
+.ls-card:hover .ls-img {
+  transform: scale(1.08);
+}
+
+.ls-overlay-card {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5,15,30,0.95) 0%, rgba(5,15,30,0.5) 55%, rgba(5,15,30,0.1) 100%);
+  transition: 0.4s;
+}
+
+.ls-card:hover .ls-overlay-card {
+  background: linear-gradient(to top, rgba(5,15,30,0.98) 0%, rgba(5,15,30,0.6) 60%, rgba(5,15,30,0.15) 100%);
+}
+
+.ls-body {
+  position: relative;
+  z-index: 2;
+  padding: 28px;
+  color: white;
+}
+
+.ls-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+}
+
+.ls-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.ls-months {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 12px;
+}
+
+.ls-body > p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.ls-temp {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 25px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* ─── BOOKING FORM ─── */
+.ladakh-booking-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 24px;
+  padding: 45px;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.lb-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lb-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.lb-col-full {
+  grid-column: 1 / -1;
+}
+
+.lb-col label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.lb-col input,
+.lb-col-full input,
+.lb-col-full textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e6eef8;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: #fbfdff;
+  outline: none;
+  transition: all 0.3s;
+  font-family: 'Lato', sans-serif;
+}
+
+.lb-col input:focus,
+.lb-col-full input:focus,
+.lb-col-full textarea:focus {
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 8px 25px rgba(26,74,110,0.1);
+}
+
+.lb-col-full textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Checkboxes */
+.lb-checkboxes {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.lb-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 16px;
+  border: 2px solid #e6eef8;
+  border-radius: 25px;
+  background: #fbfdff;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.lb-checkbox:hover {
+  border-color: var(--primary);
+  background: white;
+}
+
+.lb-checkbox input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+.lb-checkbox input[type="checkbox"]:checked + span {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.lb-submit {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.05rem;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.lb-note {
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .ladakh-seasons {
+    background-attachment: scroll;
+    padding: 60px 5%;
+  }
+  
+  .lh-bg {
+    background-attachment: scroll;
+  }
+  
+  .ls-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .ladakh-places-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .lh-content h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+  
+  .lh-content p {
+    font-size: 1rem;
+  }
+  
+  .ladakh-booking-wrapper {
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ladakh-hero {
+    min-height: 90vh;
+  }
+  
+  .lh-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .lh-content p {
+    font-size: 0.95rem;
+  }
+  
+  .lh-meta {
+    gap: 10px;
+    font-size: 0.8rem;
+  }
+  
+  .lh-meta span {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+  
+  .lh-badge {
+    font-size: 0.7rem;
+    padding: 6px 16px;
+  }
+  
+  .ls-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ls-card {
+    min-height: 320px;
+  }
+  
+  .ladakh-places-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .lp-card {
+    margin-bottom: 10px;
+  }
+  
+  .lp-img {
+    height: 200px;
+  }
+  
+  .lp-body {
+    padding: 20px;
+  }
+  
+  .lp-body h3 {
+    font-size: 1.2rem;
+  }
+  
+  .lb-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .ladakh-booking-wrapper {
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
+  
+  .lb-checkboxes {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .lb-checkbox {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .lb-submit {
+    padding: 14px;
+    font-size: 1rem;
+  }
+  
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .highlight-card {
+    padding: 25px 20px;
+  }
+  
+  .section {
+    padding: 50px 5%;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .ls-body {
+    padding: 20px;
+  }
+  
+  .ls-body h3 {
+    font-size: 1.3rem;
+  }
+  
+  .ls-icon {
+    font-size: 2rem;
+  }
+}
