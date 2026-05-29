@@ -1,9 +1,8 @@
 {
   "version": 2,
-  "outputDirectory": ".",
   "builds": [
     {
-      "src": "server.js",
+      "src": "backend/server.js",
       "use": "@vercel/node"
     },
     {
@@ -29,10 +28,14 @@
     {
       "src": "*.png",
       "use": "@vercel/static"
+    },
+    {
+      "src": "*.mp4",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/server.js" },
+    { "src": "/api/(.*)", "dest": "/backend/server.js" },
     { "src": "/admin/login", "dest": "/admin/login.html" },
     { "src": "/admin/dashboard", "dest": "/admin/dashboard.html" },
     { "src": "/", "dest": "/index.html" },
