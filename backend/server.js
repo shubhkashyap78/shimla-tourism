@@ -100,10 +100,13 @@ app.delete('/api/admin/tours/:id', verifyAdminToken, (req, res) => {
 
 // ─── HTML PAGES ───
 
-app.get('/admin/login', (req, res) => res.sendFile(path.join(__dirname, 'admin', 'login.html')));
-app.get('/admin/dashboard', (req, res) => res.sendFile(path.join(__dirname, 'admin', 'dashboard.html')));
+app.get('/admin/login', (req, res) => res.sendFile(path.join(__dirname, '..', 'admin', 'login.html')));
+app.get('/admin/dashboard', (req, res) => res.sendFile(path.join(__dirname, '..', 'admin', 'dashboard.html')));
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '..', 'index.html')));
+
+// Serve static files from parent directory
+app.use(express.static(path.join(__dirname, '..')));
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);

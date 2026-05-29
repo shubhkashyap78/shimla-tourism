@@ -7,10 +7,12 @@ A complete tourism website for Shimla with regional guides (Ladakh, Jammu & Kash
 ```
 shimla-tourism/
 ├── index.html                 # Main homepage
-├── server.js                  # Express backend server
-├── package.json              # Node.js dependencies
-├── data/
-│   └── tours.json           # Tours database
+├── backend/
+│   ├── server.js              # Express backend server
+│   ├── package.json          # Node.js dependencies
+│   ├── vercel.json           # Vercel deployment config
+│   └── data/
+│       └── tours.json       # Tours database
 ├── admin/
 │   ├── login.html           # Admin login page
 │   └── dashboard.html       # Admin dashboard
@@ -42,6 +44,7 @@ shimla-tourism/
 
 1. **Install dependencies:**
    ```bash
+   cd backend
    npm install
    ```
 
