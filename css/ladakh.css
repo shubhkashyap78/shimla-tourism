@@ -16,7 +16,7 @@
 .lh-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1508264165352-c94f0b1b2b99?w=1920&q=80');
+  background-image: url('../images/ladakh.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
